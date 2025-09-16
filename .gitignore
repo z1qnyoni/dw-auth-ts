@@ -32,3 +32,5 @@ coverage
 # build caches
 .cache
 .parcel-cache
+# Ignore environment variables
+.env
