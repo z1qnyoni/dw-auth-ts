@@ -1,0 +1,31 @@
+{
+  "name": "dw-auth-ts",
+  "version": "1.0.0",
+  "description": "DocuWare auth demo with TypeScript",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "main": "dist/demo.js",
+  "scripts": {
+    "dev": "tsx src/demo.ts",
+    "build": "tsc",
+    "start": "node dist/demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.2",
+    "qs": "^6.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [
+    "docuware",
+    "typescript",
+    "auth",
+    "oauth2"
+  ]
+}
