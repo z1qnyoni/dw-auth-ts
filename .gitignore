@@ -1,0 +1,34 @@
+# dependencies
+/node_modules
+
+# TypeScript build output
+/dist
+
+# environment files
+# keep .env, ignore only local overrides
+.env.local
+.env.*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE / editor
+.DS_Store
+Thumbs.db
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# test coverage
+coverage
+.nyc_output
+
+# build caches
+.cache
+.parcel-cache
