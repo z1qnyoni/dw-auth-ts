@@ -1,25 +1,27 @@
 # DocuWare Authentication & API Client (TypeScript)
 
-This project demonstrates how to **authenticate to DocuWare programmatically** (without human interaction) and interact with the DocuWare Platform API.  
-It is designed for backend service-to-service communication, where a system needs to log in automatically, fetch access rights, and perform API operations such as listing file cabinets or retrieving documents.
+A lightweight TypeScript client to **authenticate programmatically with DocuWare** (without user interaction) and interact with the DocuWare Platform API.  
+Designed for **backend service-to-service integrations**: log in automatically, access file cabinets, list and fetch documents, and download files.
 
 ---
 
 ## 🔑 Why This Approach
 
-DocuWare does not provide a standard OAuth2 client credentials flow.  
-Instead, the recommended approach for service integrations is to authenticate using a **service user** with **basic authentication** against the DocuWare Platform API.
+DocuWare does not support a standard OAuth2 Client Credentials flow.  
+The recommended way for backend integrations is:
 
-- We use **Basic Auth** (username + password) to establish a session programmatically.
-- The backend automatically requests a `cookie` session or access headers, which can be reused in further API calls.
-- No human interaction (like logging in via the WebClient) is required.
-- Secure configuration is handled via environment variables.
+- Use a **service user** with **Basic Authentication** (username + password).
+- Establish a session programmatically → receive cookies/headers.
+- Reuse those session tokens for further API calls.
+- No WebClient login or browser JWTs involved.
+- Configuration handled via environment variables.
 
-This is the most stable approach for backend integrations, since DocuWare's JWT tokens in the WebClient are meant only for browser sessions.
+This ensures stable, automated server-side access.
 
 ---
 
 ## 📂 Project Structure
+
 
 ```
 .
